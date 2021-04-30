@@ -1,0 +1,65 @@
+# Checks that status works correctly.
+I prelude1.inc
++ f.txt notwug.txt
++ g.txt wug.txt
++ h.txt wug2.txt
++ i.txt wug3.txt
++ j.txt wug4.txt
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+f.txt
+g.txt
+h.txt
+i.txt
+j.txt
+
+<<<
+> add f.txt
+<<<
+> add g.txt
+<<<
+> add h.txt
+<<<
+> add i.txt
+<<<
+> commit "Add f, g, h, and i"
+<<<
++ f.txt wug.txt
++ g.txt notwug.txt
+> add g.txt
+<<<
++ g.txt wug.txt
++ h.txt wug.txt
+> add h.txt
+<<<
+- h.txt
+- i.txt
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+g.txt
+h.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+f.txt (modified)
+g.txt (modified)
+h.txt (deleted)
+i.txt (deleted)
+
+=== Untracked Files ===
+j.txt
+
+<<<

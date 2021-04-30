@@ -1,0 +1,40 @@
+# Checks log after a merge.
+> init
+<<<
+> branch B1
+<<<
++ f.txt notwug.txt
+> add f.txt
+<<<
+> commit "Added f"
+<<<
+> checkout B1
+<<<
++ g.txt wug2.txt
+> add g.txt
+<<<
+> commit "Added g"
+<<<
+> merge master
+<<<
+D HEADER "commit [a-f0-9]+"
+D MERGE "Merge: [a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9] [a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${MERGE}
+${DATE}
+Merged master into B1.
+
+===
+${HEADER}
+${DATE}
+Added g
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*

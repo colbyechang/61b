@@ -1,0 +1,26 @@
+# Checks merge edge cases.
+I prelude1.inc
+> branch B1
+<<<
+> checkout B1
+<<<
++ f.txt wug.txt
+> add f.txt
+<<<
+> commit "Add f"
+<<<
++ f.txt notwug.txt
+> add f.txt
+<<<
+> commit "Update f"
+<<<
+> merge master
+Given branch is an ancestor of the current branch.
+<<<
+> checkout master
+<<<
+* f.txt
+> merge B1
+Current branch fast-forwarded.
+<<<
+= f.txt notwug.txt

@@ -1,0 +1,43 @@
+#*java -ea loa.Main
+# Check the pieces move as intended for an entire game.
+manual white
+b1-h1
+h7-g6
+c1-a3
+a2-c4
+a3-b2
+c4-f1
+b2-d2
+g6-g3
+d1-f3
+h3-f5
+e1-e3
+f5-g6
+b8-h8
+h2-f4
+h8-g7
+h6-h2
+c8-d7
+h5-f5
+f3-e2
+f1-g2
+e3-g3
+h2-h5
+h1-h4
+f5-f2
+e2-g4
+f4-f7
+d2-d5
+g6-e6
+h4-h2
+h5-e8
+d5-f3
+g2-d2
+g1-g6
+d2-e3
+f3-h5
+e3-g3
+d8-e7
+f2-f5
+h2-h4
+dump
